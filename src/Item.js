@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { DragSource } from 'react-dnd';
 
-function Preview(props) {
-    return (
-        <div className="item">
-            {props.item.name}
-        </div>
-    );
+class Item extends Component {
+    render() {
+        return (
+            <div className="item">
+                {this.props.item.name}
+            </div>
+        );
+    }
 }
 
-export default Preview;
+export default DragSource(type, spec, collect)(Item);
