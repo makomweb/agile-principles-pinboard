@@ -9,10 +9,18 @@ import { DragDropContext } from 'react-dnd'
 class App extends Component {
   state = {
     items: [
-      { id: 1, name: 'Item 1' },
-      { id: 2, name: 'Item 2' },
-      { id: 3, name: 'Item 3' },
-      { id: 4, name: 'Item 4' }
+      { id: 1, text: 'Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.' },
+      { id: 2, text: 'Welcome changing requirements, even late in development. Agile processes harness change for the customer\'s competitive advantage.' },
+      { id: 3, text: 'Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale.' },
+      { id: 4, text: 'Business people and developers must work together daily throughout the project.' },
+      { id: 5, text: 'Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.' },
+      { id: 6, text: 'The most efficient and effective method of conveying information to and within a development team is face-to-face conversation.' },
+      { id: 7, text: 'Working software is the primary measure of progress.' },
+      { id: 8, text: 'Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely.' },
+      { id: 9, text: 'Continuous attention to technical excellence and good design enhances agility.' },
+      { id: 10, text: 'Simplicity--the art of maximizing the amount of work not done--is essential.' },
+      { id: 11, text: 'The best architectures, requirements, and designs emerge from self-organizing teams.' },
+      { id: 12, text: 'At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly. ' },
     ]
   }
 
