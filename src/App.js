@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Item from './Item';
+import Target from './Target';
 
 class App extends Component {
   state = {
