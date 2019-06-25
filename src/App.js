@@ -29,7 +29,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to react-drag-n-drop</h1>
         </header>
         <div className="App-intro">
-          <div className="app-containers">
+          <div className="app-container">
             <div className="item-container">
               {this.state.items.map((item, index) => (
                 <Item key={item.id} item={item} handleDrop={(id) =>
