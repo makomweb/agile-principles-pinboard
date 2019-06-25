@@ -6,10 +6,9 @@ import Target from './Target';
 import HTML5Backend from 'react-dnd-html5-backend'
 import { DragDropContext } from 'react-dnd'
 
-
 class App extends Component {
   state = {
-    items:  [
+    items: [
       { id: 1, name: 'Item 1' },
       { id: 2, name: 'Item 2' },
       { id: 3, name: 'Item 3' },
@@ -41,8 +40,8 @@ class App extends Component {
                   this.deleteItem(id)} />
               ))}
             </div>
-            
-            <Target/>
+
+            <Target />
           </div>
         </div>
       </div>
