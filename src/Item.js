@@ -21,8 +21,9 @@ function collect(connect, monitor) {
 class Item extends Component {
     render() {        
         const { isDragging, connectDragSource, item } = this.props;
+        const opacity = isDragging ? 0 : 1;
         return connectDragSource(
-            <div className="item">
+            <div className="item" style={{opacity}}>
                 <span>{item.name}</span>
             </div>
         )
