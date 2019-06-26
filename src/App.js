@@ -42,6 +42,12 @@ class App extends Component {
                   this.deleteItem(id)} />
               ))}
         </section>
+        <div className="target-container">
+          <Target/>
+        </div>
+        {/* <p className="center">
+          I am vertically and horizontally centered.
+        </p> */}
       </div>
     );
   }
