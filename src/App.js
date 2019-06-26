@@ -36,10 +36,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to react-drag-n-drop</h1>
-        </header>
+        </header> */}
         <div className="App-intro">
           <div className="app-container">
             <div className="item-container">
@@ -49,7 +49,7 @@ class App extends Component {
               ))}
             </div>
 
-            <Target />
+            {/* <Target /> */}
           </div>
         </div>
       </div>
