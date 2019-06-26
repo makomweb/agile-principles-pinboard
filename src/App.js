@@ -35,23 +35,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to react-drag-n-drop</h1>
-        </header> */}
-        <div className="App-intro">
-          <div className="app-container">
-            <div className="item-container">
-              {this.state.items.map((item, index) => (
+      <div className="app-container">
+        <section class="items">
+          {this.state.items.map((item, index) => (
                 <Item key={item.id} item={item} handleDrop={(id) =>
                   this.deleteItem(id)} />
               ))}
-            </div>
-
-            {/* <Target /> */}
-          </div>
-        </div>
+        </section>
       </div>
     );
   }
