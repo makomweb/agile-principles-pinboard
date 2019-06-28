@@ -4,6 +4,8 @@ import Item from './Item';
 import Target from './Target';
 import HTML5Backend from 'react-dnd-html5-backend'
 import { DragDropContext } from 'react-dnd'
+import 'bootstrap/dist/css/bootstrap.css';
+import { Button } from 'reactstrap';
 
 class App extends Component {
   state = {
@@ -44,25 +46,30 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app-container">
-        {/* <section class="items">
-          {this.state.items.map((item, index) => (
-                <Item key={item.id} item={item} handleDrop={(id) =>
-                  this.updatePinned(id)} />
-              ))}
-        </section> */}
-        {/* <div className="target-container">
-          <Target pinned={this.state.pinned}/>
-        </div> */}
-        {/* <p className="center">
-          I am vertically and horizontally centered.
-        </p> */}
-
-        <div>header</div>
-        <div class="content">
-          <div class="center">
-            content
-          </div>
+      // <div className="app-container">
+      //   <div class="card">
+      //      {this.state.items.map((item, index) => (
+      //            <Item key={item.id} item={item} handleDrop={(id) =>
+      //              this.updatePinned(id)} />
+      //          ))}
+      //    </div>
+      //   <Target pinned={this.state.pinned}/>
+      // </div>
+      <div className="container">
+        <div className="grid header">
+          HEADER
+        </div>
+        <div className="grid sidebar">
+          SIDEBAR
+        </div>
+        <div className="grid content">
+          MAIN CONTENT
+        </div>
+        <div className="grid extra">
+          EXTRA CONTENT
+        </div>
+        <div className="grid footer">
+          FOOTER
         </div>
       </div>
     );
