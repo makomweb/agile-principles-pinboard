@@ -5,7 +5,9 @@ import Pinboard from './Pinboard';
 import HTML5Backend from 'react-dnd-html5-backend'
 import { DragDropContext } from 'react-dnd'
 
-class App extends Component {
+const APP_TITLE = "Agile Principles Pinboard";
+
+class App extends Component {  
   state = {
     cards: [
       { id: 1, text: 'Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.' },
@@ -22,6 +24,10 @@ class App extends Component {
       { id: 12, text: 'At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly. ' },
     ],
     pinned: null
+  }
+
+  componentDidMount = () => {
+    document.title = APP_TITLE;
   }
 
   deleteCard = (id) => {
