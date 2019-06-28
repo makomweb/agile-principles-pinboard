@@ -1,8 +1,6 @@
 .container {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-column-gap: 10px;
-  grid-row-gap: 15px;
 }
 
 .grid {
@@ -13,10 +11,29 @@
 }
 
 .cards {
+  margin: 8px;
   grid-column: 1 / 1;
   grid-row: 1 / 1;
-  color: black;
-  background: beige;
+}
+
+.row {  
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card {
+  margin-bottom: 8px;
+  margin-right: 8px;
+  padding: 8px;
+  border: 1px solid gray;
+  background-color: beige;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 160px;
+  height: 160px;
+  float: left;
+  font-size: 12px;
 }
 
 .pinboard {

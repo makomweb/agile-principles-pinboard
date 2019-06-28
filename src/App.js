@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import Item from './Item';
+import Card from './Card';
 import Target from './Target';
 import HTML5Backend from 'react-dnd-html5-backend'
 import { DragDropContext } from 'react-dnd'
-import 'bootstrap/dist/css/bootstrap.css';
-import { Button } from 'reactstrap';
 
 class App extends Component {
   state = {
-    items: [
+    cards: [
       { id: 1, text: 'Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.' },
       { id: 2, text: 'Welcome changing requirements, even late in development. Agile processes harness change for the customer\'s competitive advantage.' },
       { id: 3, text: 'Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale.' },
@@ -26,50 +24,40 @@ class App extends Component {
     pinned: null
   }
 
-  deleteItem = (id) => {
+  deleteCard = (id) => {
     this.setState(prevState => {
-      let items = prevState.items;
-      const index = items.findIndex(item => item.id === id);
-      items.splice(index, 1);
-      return { items };
+      let cards = prevState.cards;
+      const index = cards.findIndex(card => card.id === id);
+      cards.splice(index, 1);
+      return { cards };
     })
   }
 
   updatePinned = (id) => {
     this.setState(prevState => {
-      const { items } = prevState;
-      const newPinnedIndex = items.findIndex(item => item.id === id);
-      const newPinnedItem = items[newPinnedIndex];
-      return { pinned: newPinnedItem };
+      const { cards } = prevState;
+      const newPinnedIndex = cards.findIndex(card => card.id === id);
+      const newPinned = cards[newPinnedIndex];
+      return { pinned: newPinned };
     });
   }
 
   render() {
     return (
-      // <div className="app-container">
-      //   <div class="card">
-      //      {this.state.items.map((item, index) => (
-      //            <Item key={item.id} item={item} handleDrop={(id) =>
-      //              this.updatePinned(id)} />
-      //          ))}
-      //    </div>
-      //   <Target pinned={this.state.pinned}/>
-      // </div>
       <div className="container">
-        {/* <div className="grid header">
-          HEADER
-        </div> */}
-        <div className="grid cards">
-          CARDS
+        <div className="cards">
+          <div className="row">
+            {this.state.cards.map((card, index) => (
+                  <Card key={card.id} card={card} handleDrop={(id) =>
+                    this.updatePinned(id)} />
+                ))}
+          </div>
         </div>
         <div className="grid pinboard">
           <div className="centered">
-            CONTENT
+            <Target pinned={this.state.pinned}/>
           </div>
         </div>
-        {/* <div className="grid footer">
-          FOOTER
-        </div> */}
       </div>
     );
   }

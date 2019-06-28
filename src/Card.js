@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { DragSource } from 'react-dnd';
 
-const itemSource = {
+const cardSource = {
     beginDrag(props) {
-        return props.item;
+        return props.card;
     },
     endDrag(props, monitor, component) {
         if (!monitor.didDrop()) {
             return;
         }
 
-        return props.handleDrop(props.item.id);
+        return props.handleDrop(props.card.id);
     }
 }
 
@@ -22,16 +22,16 @@ function collect(connect, monitor) {
     }
 }
 
-class Item extends Component {
+class Card extends Component {
     render() {        
-        const { isDragging, connectDragSource, item } = this.props;
+        const { isDragging, connectDragSource, card } = this.props;
         const opacity = isDragging ? 0 : 1;
         return connectDragSource(
-            <div className="item" style={{opacity}}>
-                <span>{item.text}</span>
+            <div className="card" style={{opacity}}>
+                <span>{card.text}</span>
             </div>
         )
     }
 }
 
-export default DragSource('item', itemSource, collect)(Item);
+export default DragSource('card', cardSource, collect)(Card);

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { DropTarget } from 'react-dnd'
+import { DropTarget } from 'react-dnd';
 
 function collect(connect, monitor) {
     return {
@@ -11,7 +11,7 @@ function collect(connect, monitor) {
 
 class Target extends Component {
     render() {
-        // const { connectDropTarget, hovered, pinned } = this.props;
+        const { connectDropTarget, hovered, pinned } = this.props;
         // const backgroundColor = hovered ? 'lightgreen' : 'white';
         // if (pinned) {
         //     const style = { 
@@ -32,14 +32,24 @@ class Target extends Component {
         //     </div>
         // );
 
-        return (
-        <div className="target-container">
-            <div className="target-box">
-                TARGET
+        if (pinned) {
+            return connectDropTarget(
+                <div className="target-container">
+                    <div className="target-box">
+                        {pinned.text}
+                    </div>
+                </div>
+            );
+
+        }
+        return connectDropTarget(
+            <div className="target-container">
+                <div className="target-box">
+                    TARGET
+                </div>
             </div>
-        </div>
         );
     }
 }
 
-export default DropTarget('item', {}, collect)(Target);
+export default DropTarget('card', {}, collect)(Target);
