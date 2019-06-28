@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Item from './Item';
 import Target from './Target';
@@ -21,7 +20,8 @@ class App extends Component {
       { id: 10, text: 'Simplicity--the art of maximizing the amount of work not done--is essential.' },
       { id: 11, text: 'The best architectures, requirements, and designs emerge from self-organizing teams.' },
       { id: 12, text: 'At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly. ' },
-    ]
+    ],
+    pinned: null
   }
 
   deleteItem = (id) => {
@@ -33,17 +33,26 @@ class App extends Component {
     })
   }
 
+  updatePinned = (id) => {
+    this.setState(prevState => {
+      const { items } = prevState;
+      const newPinnedIndex = items.findIndex(item => item.id === id);
+      const newPinnedItem = items[newPinnedIndex];
+      return { pinned: newPinnedItem };
+    });
+  }
+
   render() {
     return (
       <div className="app-container">
         <section class="items">
           {this.state.items.map((item, index) => (
                 <Item key={item.id} item={item} handleDrop={(id) =>
-                  this.deleteItem(id)} />
+                  this.updatePinned(id)} />
               ))}
         </section>
         <div className="target-container">
-          <Target/>
+          <Target pinned={this.state.pinned}/>
         </div>
         {/* <p className="center">
           I am vertically and horizontally centered.
