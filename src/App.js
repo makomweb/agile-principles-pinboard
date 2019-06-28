@@ -59,14 +59,11 @@ class App extends Component {
         <div className="grid header">
           HEADER
         </div>
-        <div className="grid sidebar">
-          SIDEBAR
+        <div className="grid cards">
+          CARDS
         </div>
-        <div className="grid content">
-          MAIN CONTENT
-        </div>
-        <div className="grid extra">
-          EXTRA CONTENT
+        <div className="grid pinboard">
+          PINBOARD
         </div>
         <div className="grid footer">
           FOOTER
