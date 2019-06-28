@@ -34,8 +34,8 @@ class Target extends Component {
 
         if (pinned) {
             return connectDropTarget(
-                <div className="target-container">
-                    <div className="target-box">
+                <div className="grid pinboard">
+                    <div className="centered">
                         {pinned.text}
                     </div>
                 </div>
@@ -43,9 +43,9 @@ class Target extends Component {
 
         }
         return connectDropTarget(
-            <div className="target-container">
-                <div className="target-box">
-                    TARGET
+            <div className="grid pinboard">
+                <div className="centered">
+                    Drag a card here.
                 </div>
             </div>
         );

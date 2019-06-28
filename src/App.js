@@ -53,11 +53,7 @@ class App extends Component {
                 ))}
           </div>
         </div>
-        <div className="grid pinboard">
-          <div className="centered">
-            <Target pinned={this.state.pinned}/>
-          </div>
-        </div>
+        <Target pinned={this.state.pinned}/>
       </div>
     );
   }
