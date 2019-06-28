@@ -4,3 +4,50 @@
   grid-column-gap: 10px;
   grid-row-gap: 15px;
 }
+
+.grid {
+  background-color: #444;
+  color: #fff;
+  padding: 25px;
+  font-size:3rem
+}
+
+.header {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.sidebar {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  background: #a0c263;
+}
+
+.content {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background: #f5c531;
+  height: 400px;
+}
+
+.extra {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background: #898989;
+}
+ 
+.footer {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  background: #FFA500;
+}  
