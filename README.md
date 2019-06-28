@@ -1,4 +1,4 @@
-# The Agile Principles Pinboard
+# Agile Principles Pinboard
 
 ![image](agile-principles-pinboard.gif)
 
