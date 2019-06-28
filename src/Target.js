@@ -11,23 +11,33 @@ function collect(connect, monitor) {
 
 class Target extends Component {
     render() {
-        const { connectDropTarget, hovered, pinned } = this.props;
-        const backgroundColor = hovered ? 'lightgreen' : 'white';
-        if (pinned) {
-            const style = { 
-                color: hovered ? 'black' : 'white',
-                backgroundColor: hovered ? 'lightgreen' : 'purple'
-            };
-            return connectDropTarget(
-                <div className="target" style={style}>
-                    {pinned.text}
-                </div>
-            );
-        }
-        return connectDropTarget(
-            <div className="target" style={{ background: backgroundColor }}>
-                Target
+        // const { connectDropTarget, hovered, pinned } = this.props;
+        // const backgroundColor = hovered ? 'lightgreen' : 'white';
+        // if (pinned) {
+        //     const style = { 
+        //         color: hovered ? 'black' : 'white',
+        //         backgroundColor: hovered ? 'lightgreen' : 'purple'
+        //     };
+        //     return connectDropTarget(
+        //         <div className="target-pinned" >
+        //             <div className="target-pinned" style={style}>
+        //                 {pinned.text}
+        //             </div>
+        //         </div>
+        //     );
+        // }
+        // return connectDropTarget(
+        //     <div className="target" style={{ background: backgroundColor }}>
+        //         Target
+        //     </div>
+        // );
+
+        return (
+        <div className="target-container">
+            <div className="target-box">
+                TARGET
             </div>
+        </div>
         );
     }
 }

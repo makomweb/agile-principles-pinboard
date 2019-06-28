@@ -45,18 +45,21 @@ class App extends Component {
   render() {
     return (
       <div className="app-container">
-        <section class="items">
+        {/* <section class="items">
           {this.state.items.map((item, index) => (
                 <Item key={item.id} item={item} handleDrop={(id) =>
                   this.updatePinned(id)} />
               ))}
-        </section>
-        <div className="target-container">
+        </section> */}
+        {/* <div className="target-container">
           <Target pinned={this.state.pinned}/>
-        </div>
+        </div> */}
         {/* <p className="center">
           I am vertically and horizontally centered.
         </p> */}
+
+        <div>header</div>
+        <div class="content">content</div>
       </div>
     );
   }
