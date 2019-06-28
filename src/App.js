@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Card from './Card';
-import Target from './Target';
+import Pinboard from './Pinboard';
 import HTML5Backend from 'react-dnd-html5-backend'
 import { DragDropContext } from 'react-dnd'
 
@@ -53,7 +53,7 @@ class App extends Component {
                 ))}
           </div>
         </div>
-        <Target pinned={this.state.pinned}/>
+        <Pinboard pinned={this.state.pinned}/>
       </div>
     );
   }
