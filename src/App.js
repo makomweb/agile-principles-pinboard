@@ -42,13 +42,17 @@ class App extends Component {
     });
   }
 
+  isPinned(card){
+    return this.state.pinned && this.state.pinned.id === card.id;
+  }
+
   render() {
     return (
       <div className="container">
         <div className="cards">
           <div className="row">
             {this.state.cards.map((card, index) => (
-                  <Card key={card.id} card={card} handleDrop={(id) =>
+                  <Card key={card.id} card={card} isPinned={this.isPinned(card)} handleDrop={(id) =>
                     this.updatePinned(id)} />
                 ))}
           </div>

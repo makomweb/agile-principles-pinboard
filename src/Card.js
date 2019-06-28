@@ -24,10 +24,16 @@ function collect(connect, monitor) {
 
 class Card extends Component {
     render() {        
-        const { isDragging, connectDragSource, card } = this.props;
-        const opacity = isDragging ? 0 : 1;
+        const { isDragging, connectDragSource, card, isPinned } = this.props;
+
+        let style = {
+             opacity: isDragging ? 0 : 1,
+             background: isPinned ? 'brown' : 'beige',
+             color: isPinned ? 'white' : 'black'
+        }
+
         return connectDragSource(
-            <div className="card" style={{opacity}}>
+            <div className="card" style={style}>
                 <span>{card.text}</span>
             </div>
         )
