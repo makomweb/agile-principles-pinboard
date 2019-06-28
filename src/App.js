@@ -56,18 +56,20 @@ class App extends Component {
       //   <Target pinned={this.state.pinned}/>
       // </div>
       <div className="container">
-        <div className="grid header">
+        {/* <div className="grid header">
           HEADER
-        </div>
+        </div> */}
         <div className="grid cards">
           CARDS
         </div>
         <div className="grid pinboard">
-          PINBOARD
+          <div className="centered">
+            CONTENT
+          </div>
         </div>
-        <div className="grid footer">
+        {/* <div className="grid footer">
           FOOTER
-        </div>
+        </div> */}
       </div>
     );
   }
